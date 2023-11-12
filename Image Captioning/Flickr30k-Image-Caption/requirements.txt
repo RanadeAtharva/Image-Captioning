@@ -1,0 +1,8 @@
+Flask==1.1.2
+gTTS==2.2.4
+keras==2.8.0
+matplotlib==3.3.4
+numpy==1.22.3
+pandas==1.2.4
+tensorflow==2.8.0
+numpy==1.18.5

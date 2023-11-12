@@ -1,0 +1,36 @@
+// Imports
+//
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+// Vars and Reset
+//
+$theme:       #454cad;
+$dark-text:   #5f6982;
+
+html,body,* { box-sizing: border-box; font-size: 16px;}
+html,body   { height: 100%; text-align: center;}
+body        { padding: 2rem; background: #f8f8f8;}
+
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: $dark-text;
+}
+.form-inline{
+  text-align: center;
+}
+body{
+
+  background-image: url("1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.jumbotron{
+ background-color: rgba(0,0,0,0.3);
+}
+.title{
+  font-family: "Dancing Script", sans-serif;
+}

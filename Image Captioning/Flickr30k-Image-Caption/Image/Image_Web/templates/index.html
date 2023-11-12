@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Captioning</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Luckiest+Guy&display=swap');
+
+html,body,* { box-sizing: border-box; font-size: 16px;}
+html,body   { height: 100%; text-align: center;}
+body        { padding: 2rem; background: #f8f8f8;}
+.heading{
+	font-weight: 100;
+	font-size: 4em;
+	text-shadow: 1px 1px 5px black;
+}
+
+img{
+	height: 90%;
+	width: 100%;
+}
+
+.text{
+	font-size: 32px;
+	font-style: italic;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: $dark-text;
+}
+.form-inline{
+  text-align: center;
+}
+body{
+
+  background-image: url('static/images/2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.jumbotron{
+ background-color: rgba(0,0,0,0.3);
+}
+.title{
+  font-family: "Dancing Script", sans-serif;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+
+	<div class="container-fluid">
+
+		<div style="background-color: !important" class="jumbotron">
+			<div class="container-fluid">
+				<h1 class="heading title" style=" color:black opacity:1" > Image Captioning</h1>
+				<p> Upload your image to generate a caption... </p>
+			</div>
+			<form class="form-inline" method="POST" action="/" enctype="multipart/form-data">
+
+				<div class="container" style="text-align: center">
+					<label style="background: !important"><b> Image : &nbsp;&nbsp; </b></label>
+					<input class="form-control" type="file" name="userfile" placeholder="Your image">
+					<button type="submit" class="btn btn-primary"> Submit</button>
+				</div>
+			</form>
+		</div>
+
+
+
+
+
+		<br>
+		<br>
+
+		{% if your_result %}
+
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="{{your_result['image']}}">
+				</div>
+				<div class="col-sm-8">
+					<p  class="text"> Generated Caption : </p>
+			 		<p> <b>{{ your_result['caption'] }}</b> </p>
+				</div>
+			</div>
+		{% endif %}
+
+	</div>
+
+</body>
+</html>
